@@ -1,0 +1,146 @@
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f2933, #0f172a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main card */
+.list-container {
+  background: #111827;
+  width: 420px;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 18px;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+/* Task list */
+ul {
+  list-style: none;
+  margin-bottom: 18px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #38bdf8;
+  border-radius: 3px;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background: #1f2937;
+  transition: background 0.2s ease;
+}
+
+li:hover {
+  background: #273449;
+}
+
+/* Task layout */
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  color: #e5e7eb;
+}
+
+.task-right {
+  display: flex;
+  gap: 8px;
+}
+
+/* Inputs */
+.todo-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+.todo-input::placeholder {
+  color: #9ca3af;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #1f2937;
+  color: #e5e7eb;
+}
+
+/* Buttons */
+button {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.delete-item {
+  background: linear-gradient(135deg, #fb7185, #ef4444);
+  color: white;
+}
+
+.clear-all {
+  width: 100%;
+  margin-top: 12px;
+  background: #020617;
+  color: #e5e7eb;
+  border: 1px solid #334155;
+}
+
+.clear-all:hover {
+  background: #020617;
+  border-color: #38bdf8;
+}
+
+/* Completed task */
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
